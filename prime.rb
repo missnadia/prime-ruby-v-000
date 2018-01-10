@@ -2,6 +2,7 @@ def prime?(num)
  sq_numbers = (1..num).to_a
   sq_numbers.each do |sq|
     sq*sq
+    counter += 1
     break if sq*sq > num
   end
 
