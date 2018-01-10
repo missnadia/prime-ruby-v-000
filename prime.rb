@@ -18,7 +18,6 @@ def prime?(num)
 =end
 
   if num > 1
-    true
   else
     false
   end
