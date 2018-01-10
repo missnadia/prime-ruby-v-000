@@ -17,7 +17,7 @@ def prime?(num)
   end
 =end
 
-  if num > 1 && ((num^0.5) == ((num%2==0) || (num%3==0)))
+  if num > 1 && ((num%2==0) || (num%3==0))
     true
   else
     false
