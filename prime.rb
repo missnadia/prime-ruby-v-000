@@ -1,5 +1,6 @@
 def prime?(num)
- sq_numbers = (1..num).to_a
+ sq_numbers = (2..num).to_a
+  counter = 0
   sq_numbers.each do |sq|
     sq*sq
     counter += 1
