@@ -1,26 +1,19 @@
-def prime?(num)
- sq_numbers = (2..num).to_a
- sq_numbers.collect do |sq|
-   sq%2 != 0
- end
+def sieve(max)
+  primes = (0..max).to_a
 
+  primes[0] = primes[1] = nil
 
-
-=begin counter = 0
-  sq_numbers.each do |sq|
+  counter = 0
+  primes.each do |p|
+    next unless p
+    break if p*p > max
     counter += 1
-    break if sq*sq > num
+    (p*p).step(max,p) { |m| primes[m] = nil }
   end
 
-  prime_numbers = (2..sq_numbers).to_a
-  prime_numbers.each do |y|
-    num%y == 0
-  end
+  primes.compact
+end
 
-  if prime_numbers == nil
-    true
-  else
-    false
-  end
-=end
+def prime?(num)
+  sieve(num).include?(num)
 end
