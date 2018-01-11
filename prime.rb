@@ -1,6 +1,6 @@
 def prime?(num)
  sq_numbers = (2..num).to_a
- sq_numbers.collect? do |sq|
+ sq_numbers.collect do |sq|
    sq%2 != 0
  end
 
