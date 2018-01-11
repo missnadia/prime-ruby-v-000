@@ -1,5 +1,11 @@
 def prime?(num)
  sq_numbers = (2..num).to_a
+ sq_numbers.collect? do |sq|
+   sq%2 != 0
+ end
+
+
+
   counter = 0
   sq_numbers.each do |sq|
     counter += 1
