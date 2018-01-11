@@ -6,7 +6,7 @@ def prime?(num)
 
 
 
-  counter = 0
+=begin counter = 0
   sq_numbers.each do |sq|
     counter += 1
     break if sq*sq > num
@@ -22,4 +22,5 @@ def prime?(num)
   else
     false
   end
+=end
 end
